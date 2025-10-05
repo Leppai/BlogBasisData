@@ -153,6 +153,12 @@ header h2 {
   color: #0077ccee;
 }
 
+.subjudul {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  border-left: 4px solid  #0077ccee;
+}
+
 .main p {
   text-align: justify;
   text-indent: 30px;
@@ -242,4 +248,5 @@ body.light .btn-back {
     margin-left: 10px;
     font-size: 18px;
   }
+
 }
