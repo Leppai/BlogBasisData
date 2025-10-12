@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post 8 - Syahlevi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="btn-back" onclick="window.location.href='index.html'">Kembali</button>
+    <h2>Relation Many-To-Many</h2>
+    <button class="mode-btn" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <div class="main">
+    <img src="gambar8.png" alt="Gambar Postingan">
+    <h1>Apa itu relation pada ERD? Mengapa many-to-many tidak baik digunakan?</h1>
+    <p>
+      Relation atau relasi adalah hubungan yang menghubungkan antara dua atau lebih entitas di dalam 
+      basis data. Relasi ini menunjukkan bagaimana data pada satu entitas berhubungan dengan data pada 
+      entitas lainnya. Misalnya, dalam sistem akademik, entitas Mahasiswa bisa memiliki relasi dengan 
+      entitas Mata Kuliah melalui hubungan “mengambil”. Artinya, setiap mahasiswa bisa mengambil beberapa 
+      mata kuliah, dan setiap mata kuliah bisa diambil oleh banyak mahasiswa. Hubungan inilah yang disebut 
+      relasi, dan tujuannya adalah untuk menggambarkan keterkaitan logis antar data sehingga sistem basis 
+      data dapat dirancang secara terstruktur dan efisien.
+    </p>
+    <h3 class="subjudul">Relation Many-To-Many</h3>
+    <p>
+      Relation Many-To-Many adalah jenis relasi di mana satu data pada entitas pertama dapat berhubungan 
+      dengan banyak data pada entitas kedua, dan sebaliknya. Contohnya seperti mahasiswa dan mata kuliah 
+      tadi: satu mahasiswa bisa mengambil banyak mata kuliah, dan satu mata kuliah juga bisa diikuti oleh 
+      banyak mahasiswa. Walaupun terlihat umum dan sering terjadi dalam dunia nyata, relasi many-to-many 
+      tidak baik langsung digunakan dalam perancangan basis data karena dapat menyebabkan duplikasi data, 
+      kesulitan dalam proses pencarian (query), dan masalah ketika ingin menambahkan, memperbarui, atau 
+      menghapus data.
+    </p>
+    <p>
+      Oleh karena itu, relasi many-to-many biasanya perlu dipecah menjadi dua relasi one-to-many dengan 
+      cara menambahkan entitas baru yang disebut entitas penghubung atau tabel relasi. Misalnya, relasi 
+      many-to-many antara Mahasiswa dan Mata Kuliah bisa dipecah dengan menambahkan entitas KRS (Kartu 
+      Rencana Studi) sebagai penghubung. Dengan begitu, sistem menjadi lebih rapi, mudah dikelola, dan 
+      terhindar dari data yang berulang atau sulit dilacak.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <p>© 2025 Syahlevi Fazli Nugraha. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/Leppai" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://youtube.com/@levifazli29" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/sleppai" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:if24.syahlevinugraha@mhs.ubpkarawang.ac.id"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

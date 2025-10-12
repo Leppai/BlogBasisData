@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post 7 - Syahlevi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="btn-back" onclick="window.location.href='index.html'">Kembali</button>
+    <h2>Primary Key, Foreign Key, dan Candidate Key</h2>
+    <button class="mode-btn" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <div class="main">
+    <img src="gambar7.jpg" alt="Gambar Postingan">
+    <h1>Apa itu Primary Key, Foreign Key, dan Candidate Key? berikan 5 contoh</h1>
+    <p>
+      Dalam perancangan ERD (Entity Relationship Diagram), istilah Key mengacu pada atribut atau kombinasi 
+      atribut yang digunakan untuk mengidentifikasi setiap data secara unik di dalam sebuah tabel (entitas). 
+      Dengan adanya Key, kita bisa memastikan bahwa tidak ada data yang ganda dan setiap entitas dapat 
+      dihubungkan dengan entitas lain dengan cara yang tepat. Key berfungsi sebagai pengenal utama untuk 
+      membedakan satu baris data dengan baris lainnya.
+    </p>
+    <h3 class="subjudul">1. Primary Key</h3>
+    <p>
+      Primary Key adalah atribut utama yang digunakan untuk mengidentifikasi setiap baris data secara 
+      unik di dalam tabel. Nilai dari primary key tidak boleh sama dan tidak boleh kosong (NULL). 
+      Setiap tabel wajib memiliki satu primary key agar sistem dapat membedakan setiap record secara jelas.
+    </p>
+    <p style="text-indent: 0;">Contoh penerapan Primary Key dalam ERD:</p>
+    <ol>
+      <li>Tabel Mahasiswa → NIM sebagai Primary Key</li>
+      <li>Tabel Dosen → NIP sebagai Primary Key</li>
+      <li>Tabel Mata_Kuliah → Kode_MK sebagai Primary Key</li>
+      <li>Tabel Barang → ID_Barang sebagai Primary Key</li>
+      <li>Tabel Transaksi → No_Transaksi sebagai Primary Key</li>
+    </ol>
+    <img src="key1.png" alt="Gambar Postingan">
+    <h3 class="subjudul">2. Foreign Key</h3>
+    <p>
+      Foreign Key adalah atribut yang digunakan untuk menghubungkan satu tabel dengan tabel lainnya. 
+      Atribut ini biasanya berasal dari Primary Key di tabel lain. Fungsi utamanya adalah untuk menjaga 
+      hubungan antar entitas agar data tetap konsisten dan saling terhubung.
+    </p>
+    <p style="text-indent: 0;">Contoh penerapan Foreign Key dalam ERD:</p>
+    <ol>
+      <li>Tabel Mahasiswa → ID_Dosen sebagai Foreign Key yang terhubung ke tabel Dosen_Wali</li>
+      <li>Tabel KRS → NIM sebagai Foreign Key yang terhubung ke tabel Mahasiswa</li>
+      <li>Tabel Transaksi → ID_Barang sebagai Foreign Key yang terhubung ke tabel Barang</li>
+      <li>Tabel Nilai → NIM sebagai Foreign Key yang terhubung ke tabel Mahasiswa</li>
+      <li>Tabel Gaji → NIP sebagai Foreign Key yang terhubung ke tabel Dosen</li>
+    </ol>
+    <img src="key2.png" alt="Gambar Postingan">
+    <h3 class="subjudul">3. Candidate Key</h3>
+    <p>
+      Candidate Key adalah sekumpulan atribut yang berpotensi menjadi Primary Key karena memiliki 
+      kemampuan untuk mengidentifikasi setiap record secara unik. Dari beberapa Candidate Key yang 
+      ada, hanya satu yang akan dipilih sebagai Primary Key, sementara yang lain disebut Alternate Key.
+    </p>
+    <p style="text-indent: 0;">Contoh penerapan Candidate Key dalam ERD:</p>
+    <ol>
+      <li>Tabel Mahasiswa → NIM dan Email bisa menjadi Candidate Key</li>
+      <li>Tabel Dosen → NIP dan No_HP bisa menjadi Candidate Key</li>
+      <li>Tabel Pelanggan → ID_Pelanggan dan Nomor_KTP bisa menjadi Candidate Key</li>
+      <li>Tabel Karyawan → ID_Karyawan dan Email bisa menjadi Candidate Key</li>
+      <li>Tabel Barang → ID_Barang dan Kode_Produk bisa menjadi Candidate Key</li>
+    </ol>
+    <img src="key3.png" alt="Gambar Postingan">
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <p>© 2025 Syahlevi Fazli Nugraha. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/Leppai" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://youtube.com/@levifazli29" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/sleppai" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:if24.syahlevinugraha@mhs.ubpkarawang.ac.id"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
