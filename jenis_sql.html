@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post 12 - Syahlevi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="btn-back" onclick="window.location.href='index.html'">Kembali</button>
+    <h2>SQL, DDL, DML, DCL, dan TCL</h2>
+    <button class="mode-btn" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <div class="main">
+    <img src="gambar12.png" alt="Gambar Postingan">
+    <h1>Apa itu SQL, DDL, DML, DCL, dan TCL?</h1>
+    <h3 class="subjudul">1. SQL (Structured Query Language)</h3>
+    <p>
+      SQL adalah bahasa standar untuk mengelola dan mengakses database relasional.
+      Dengan SQL, kamu bisa membuat tabel, menyimpan data, mengubah data, menghapus data, 
+      hingga mengatur hak akses pengguna. SQL terbagi menjadi beberapa kategori perintah, 
+      yaitu DDL, DML, DCL, dan TCL.
+    </p>
+    <h3 class="subjudul">2. DDL (Data Definition Language)</h3>
+    <p>
+      DDL digunakan untuk membuat, mengubah, dan menghapus struktur database. Semua 
+      operasi DDL bersifat auto-commit, artinya perubahan langsung tersimpan.
+    </p>
+    <p style="text-indent: 0;">Contoh perintah DDL:</p>
+    <ol>
+      <li>CREATE → membuat tabel atau objek baru</li>
+      <li>ALTER → mengubah struktur tabel</li>
+      <li>DROP → menghapus tabel</li>
+      <li>TRUNCATE → menghapus seluruh data dalam tabel tanpa menghapus strukturnya</li>
+    </ol>
+    <h3 class="subjudul">3. DML (Data Manipulation Language)</h3>
+    <p>
+      DML digunakan untuk mengolah data di dalam tabel. Perubahan DML tidak langsung disimpan 
+      sebelum dilakukan COMMIT.
+    </p>
+    <p style="text-indent: 0;">Contoh perintah DML:</p>
+    <ol>
+      <li>SELECT → mengambil data</li>
+      <li>INSERT → menambah data</li>
+      <li>UPDATE → mengubah data</li>
+      <li>DELETE → menghapus data</li>
+    </ol>
+    <h3 class="subjudul">4. DCL (Data Control Language)</h3>
+    <p>
+      DCL digunakan untuk mengontrol hak akses dan izin pengguna terhadap data dalam database.
+    </p>
+    <p style="text-indent: 0;">Contoh perintah DCL:</p>
+    <ol>
+      <li>GRANT → memberi hak akses</li>
+      <li>REVOKE → mencabut hak akses</li>
+    </ol>
+    <h3 class="subjudul">5. TCL (Transaction Control Language)</h3>
+    <p>
+      TCL digunakan untuk mengelola transaksi agar perubahan data tetap aman dan konsisten.
+    </p>
+    <p style="text-indent: 0;">Contoh perintah TCL:</p>
+    <ol>
+      <li>SAVEPOINT → membuat titik penyimpanan agar bisa rollback sebagian</li>
+      <li>ROLLBACK → membatalkan perubahan sebelum commit</li>
+      <li>COMMIT → menyimpan perubahan permanen</li>
+    </ol>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <p>© 2025 Syahlevi Fazli Nugraha. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/Leppai" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://youtube.com/@levifazli29" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/sleppai" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:if24.syahlevinugraha@mhs.ubpkarawang.ac.id"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
